@@ -4,19 +4,12 @@ const { PORT = 3000 } = process.env;
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send(
-    `<html>
-      <head>
-        <title>Werstack</title>
-      </head>
-      <body style='display: flex; align-items: center; justify-content: center;'>
-        <p>crm.werstack</p>
-      </body>
-    </html>`
-  );
-}); 
+app.use(express.json());
 
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`)
-}) 
+app.use(express.static(__dirname));
+
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/about.html");
+});
+
+app.listen(PORT);
