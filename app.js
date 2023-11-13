@@ -7,9 +7,12 @@ const app = express();
 app.get('/', (req, res) => {
   res.send(
     `<html>
-    <body style='display: flex; align-items: center; justify-content: center;'>
-      <p>crm.werstack</p>
-    </body>
+      <head>
+        <title>Werstack</title>
+      </head>
+      <body style='display: flex; align-items: center; justify-content: center;'>
+        <p>crm.werstack</p>
+      </body>
     </html>`
   );
 }); 
