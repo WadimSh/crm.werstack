@@ -8,4 +8,11 @@
 .text {
   color: #ee5626;
   font-size: 18px;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+.text:hover {
+  transform: scale(1.5);
+  transition: all .3s ease;
 }

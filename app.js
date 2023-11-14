@@ -12,4 +12,8 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/about.html");
 });
 
+app.get("/cover", (req, res) => {
+  res.sendFile(__dirname + "/about.html");
+});
+
 app.listen(PORT);
