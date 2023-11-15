@@ -6,7 +6,27 @@
   <link rel="stylesheet" href="./about.css" />
   <title>werstack_crm</title>
 </head>
-<body class="body">
-  <a class="text" href="./cover.html">crm.werstack</a>
+<body>
+  <div class="scroll-indicator">
+    <div class="progress-bar"></div>
+  </div>
+  <section>
+    <a class="text" href="./cover.html">crm.werstack</a>
+  </section>
+  <section>
+    <h2>Section2</h2>
+  </section>
+  <section>
+    <h2>Section3</h2>
+  </section>
+  <script>
+    const progressBar = document.querySelector(".progress-bar");
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    window.addEventListener("scroll", () => {
+      const scrollTop = document.documentElement.scrollTop;
+      const scrolled = (scrollTop / height) * 100;
+      progressBar.style.width = `${scrolled}%`;
+    });
+  </script>
 </body>
 </html>
