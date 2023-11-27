@@ -7,7 +7,7 @@ exports.sendEmail = async (to, subject, message) => {
     secure: true,
     auth: {
       user: 'info@werstack-dev.ru',
-      pass: 'Sh29071978',
+      pass: 'xxxxx',
     },
   });
 
