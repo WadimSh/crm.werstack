@@ -2,15 +2,17 @@ const nodemailer = require('nodemailer');
 
 exports.sendEmail = async (to, subject, message) => {
   const transporter = nodemailer.createTransport({
-    service: 'yandex',
+    host: 'imap.yandex.ru',
+    port: 465,
+    secure: true,
     auth: {
-      user: 'wadim11@yandex.ru',
+      user: 'info@werstack-dev.ru',
       pass: 'Sh29071978',
     },
   });
 
   const mailOptions = {
-    from: 'wadim11@yandex.ru',
+    from: 'info@werstack-dev.ru',
     to,
     subject,
     text: message
