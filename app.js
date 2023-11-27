@@ -1,10 +1,13 @@
 const express = require('express');
+const emailRoutes = require('./routers/email-route');
 
-const { PORT = 3000 } = process.env;
+const { PORT = 5000 } = process.env;
 
 const app = express();
 
 app.use(express.json());
+
+app.use('/emails', emailRoutes);
 
 app.use(express.static(__dirname));
 
